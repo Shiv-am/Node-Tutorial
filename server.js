@@ -1,8 +1,19 @@
 const http = require('http');
 const fs= require('fs');
+const _ = require('lodash');
+
+//lodash
+//getting rando numver using lodash
+
+const num = _.random(0,30);
+console.log(num);
+
+
+
+
+
 
 const server = http.createServer((req,res) =>{
-    console.log(req.url,req.method);
  
 //set header contnent type
   // res.setHeader('Content-Type','text/plain');
