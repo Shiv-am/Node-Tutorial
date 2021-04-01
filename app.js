@@ -1,5 +1,13 @@
 const express = require('express');
 
+//Registring view Engine
+
+app.set('view engine','ejs');
+
+
+
+
+
 //creating react app
 
 const app = express();
