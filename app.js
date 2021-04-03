@@ -1,15 +1,15 @@
 const express = require('express');
 const morgan = require('morgan');
-
+const mongoose =require('mongoose');
 // express app
 const app = express();
 
 
 //importing database
 const dbURI = 'mongodb+srv://shivam05:shivam123@nodetutorial.mcu06.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-
-// listen for requests
-app.listen(3000);
+mongoose.connect(dbURI, {useNewUrlParser:true , useUnifiedTopology: true})
+.then((result) =>app.listen(3000))
+.catch((err)=>console.log('error'));
 
 // register view engine
 app.set('view engine', 'ejs');
