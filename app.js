@@ -4,6 +4,13 @@ const express = require('express');
 
 app.set('view engine','ejs');
 
+//Creating Middleware
+app.use((req,res,next)=>{
+    console.log('new request made');
+    console.log('host',res.hostname());
+    console.log('path',res.path());
+    console.log('method',req.method());
+})
 
 
 
