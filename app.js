@@ -4,6 +4,10 @@ const morgan = require('morgan');
 // express app
 const app = express();
 
+
+//importing database
+const dbURI = 'mongodb+srv://shivam05:shivam123@nodetutorial.mcu06.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+
 // listen for requests
 app.listen(3000);
 
